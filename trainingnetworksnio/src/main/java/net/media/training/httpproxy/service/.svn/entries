@@ -1,0 +1,40 @@
+8
+
+dir
+11329
+http://code-svn.internal.directi.com/skenzo/HttpProxy/Main/src/com/skenzo/httpproxy/service
+http://code-svn.internal.directi.com
+
+
+
+2008-08-27T09:44:08.143531Z
+6151
+jigar.p
+
+
+svn:special svn:externals svn:needs-lock
+
+ThreadedServer.java
+file
+
+
+
+
+2008-08-27T07:17:56.271706Z
+dc2d37d3e8e928bef41e3deb24ef91fd
+2008-08-27T09:44:08.143531Z
+6151
+jigar.p
+
+HttpProxyServer.java
+file
+
+
+
+
+2008-08-27T08:02:19.212490Z
+ccedc95f9d9fbd87a48a9adda56b200c
+2008-08-27T09:44:08.143531Z
+6151
+jigar.p
+

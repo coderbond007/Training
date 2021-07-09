@@ -1,0 +1,100 @@
+package com.skenzo.httpproxy.service;
+
+import snaq.db.ConnectionPoolManager;
+
+import java.util.Vector;
+import java.io.*;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import org.apache.log4j.Logger;
+
+/**
+ * Created by IntelliJ IDEA.
+ * User: jigar.p
+ * Date: Aug 27, 2008
+ * Time: 12:14:44 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class HttpProxyServer
+{
+    static Logger log = Logger.getLogger( HttpProxyServer.class );
+    private static ConnectionPoolManager cpm = null;
+    private static final int HTTP_PORT = 8080;
+    Vector<String> addressVect = null;
+    private static final String PATH = "/address.txt";
+
+    public HttpProxyServer() throws IOException
+    {
+        cpm = ConnectionPoolManager.getInstance();
+        loadAddresses();
+    }
+
+    public void loadAddresses()
+    {
+        File file = new File( PATH );
+
+        addressVect = new Vector<String>();
+
+        try
+        {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader( getClass().getResourceAsStream( PATH )));
+
+            String line;
+
+            while( ( line = bufferedReader.readLine() ) != null)
+            {
+                addressVect.addElement( line );
+            }            
+            bufferedReader.close();
+        }
+        catch (FileNotFoundException fileNotFoundException)
+        {
+            log.error( fileNotFoundException.getMessage(), fileNotFoundException );
+        }
+        catch (IOException ioException)
+        {
+            log.error( ioException.getMessage(), ioException );
+        }
+    }
+
+    public boolean isAddressValid()
+    {
+        return false;
+    }
+
+    public void runServer() throws Exception
+    {
+        ServerSocket server;
+        server = new ServerSocket( HTTP_PORT );
+        log.info( "Http server listening on :: " + HTTP_PORT );
+
+        while ( true )
+        {
+            try
+            {
+                Socket socket = server.accept();
+                ThreadedServer threadedEchoServer = new ThreadedServer( getConnection(), socket, addressVect );
+                threadedEchoServer.start();
+            }
+            catch(Exception exception)
+            {
+                log.error( exception.getMessage(), exception );
+            }
+        }
+    }
+
+    private Connection getConnection() throws SQLException
+    {
+        return cpm.getConnection( "local" );
+    }
+
+    public static void main(String [] args) throws Exception
+    {
+        log.info("Running proxy server...");
+        new HttpProxyServer().runServer();
+    }
+}
+

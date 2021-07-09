@@ -1,0 +1,51 @@
+[
+  {
+    "map": {
+      "Battery Composition": "Lithium Ion",
+      "Battery Power": "5,000",
+      "Camera Description": "5MP",
+      "Internal Memory": "4 GB",
+      "Configuration": "Octa Core",
+      "Connectivity Technology": "4G; 3G; 2G; GSM; WCDMA; LTE; FDD; TDD",
+      "Processor Brand Name": "Exynos 7904",
+      "Processor Speed": "1.8 GHz",
+      "Display Size": "6.3 inches",
+      "Display Type": "Full HD+",
+      "Effective Resolution": "13 megapixels",
+      "Flash Memory": "64",
+      "Included Components": "Handset (Non-removable Battery Included), Travel Adapter, USB Cable, Ejection Pin and User Manual",
+      "Item Dimensions": "15.6 x 0.9 x 7.5 Centimetres",
+      "Item Weight": "186 grams",
+      "Lithium Battery Energy Content": "18.87 Watt Hours",
+      "Number of Memory Slots": "512GB",
+      "Operating System": "Android Oreo v8.1",
+      "Special Features": "Dual Sim; Front Camera; Music Player; GPS; Video Player; Accelerometer; Fingerprint sensor; Gyro sensor; Geomagnetic sensor; Proximity sensor",
+      "Warranty Description": "1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase"
+    },
+    "price": "11,990.00",
+    "title": "Samsung Galaxy M20 (Ocean Blue, 4+64GB)"
+  },
+  {
+    "map": {
+      "": "",
+      "Rear Camera Lens 1": "16 megapixels",
+      "Rear Camera Lens 2": "10MP",
+      "Screen Size": "6.4 inches",
+      "Screen Type": "3040 x 1440",
+      "Battery Power (In mAH)": "4,100",
+      "RAM": "—",
+      "Inbuilt Storage (in GB)": "—",
+      "Processor Brand": "Exynos 9820",
+      "Operating System": "Android",
+      "Warranty Details": "1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase",
+      "Battery type": "Lithium Ion",
+      "Processor Speed": "2.73 GHz",
+      "Item Weight": "175 grams",
+      "What\u0027s in the box": "Handset, Earphones, Travel Adapter, USB Cable, Ejection Pin and User Manual",
+      "Additional Features": "Dual SIM ; GPS ; Accelerometer ; Barometer ; Fingerprint sensor ; Gyro sensor ; Geomagnetic sensor ; Hall sensor ; RGB Light sensor ; Proximity sensor",
+      "Item Dimensions": "15.8 x 0.8 x 7.4 Centimetres"
+    },
+    "price": "117,900.00",
+    "title": "Samsung Galaxy S10 Plus SM-G975FCWHINS (Ceramic White, 12GB RAM, 1TB Storage) with Offer"
+  }
+]
